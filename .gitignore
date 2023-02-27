@@ -1,0 +1,5 @@
+/.idea/vcs.xml
+/cmake-build-debug/
+/.idea/misc.xml
+/.idea/.gitignore
+/CMakeLists.txt

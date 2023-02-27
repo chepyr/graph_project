@@ -4,10 +4,11 @@
 
 using namespace std;
 
-vector<vector<int>> graph;
-vector<bool> visited;
-
-void bfs(int start_vertex) {
+void bfs(
+        int start_vertex,
+        vector<vector<int>> &graph,
+        vector<bool> &visited
+) {
     queue<int> q;
     q.push(start_vertex);
     visited[start_vertex] = true;
@@ -27,17 +28,3 @@ void bfs(int start_vertex) {
     }
 }
 
-int main() {
-    int n_vertex, n_edge;
-    cin >> n_vertex >> n_edge;
-    graph.resize(n_vertex);
-    visited.resize(n_vertex, false);
-
-    for (int i = 0; i < n_edge; i++) {
-        int u, v;
-        cin >> u >> v;
-        graph[u].push_back(v);
-        graph[v].push_back(u);
-    }
-    bfs(0);
-}
